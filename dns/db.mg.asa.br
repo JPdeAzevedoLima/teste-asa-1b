@@ -1,0 +1,18 @@
+; BIND data file for local loopback interface
+;
+$TTL 10
+@   IN  SOA mg.asa.br   root.mg.asa.br. (
+            4   ;   serial
+            10  ;   refresh
+            86400   ;   retry
+            2419200 ;   expiry
+            10) ;   negative cache TTL
+;
+@   IN  NS  mg.asa.br.
+@   IN  NS  ns1.mg.asa.br.
+;@   IN  MX 10    mail.mg.asa.br.
+@   IN  A   10.25.2.19
+
+ns1     IN  A   10.25.2.19
+mail    IN  A   10.25.2.19
+www     IN  CNAME   ns1
